@@ -1,3 +1,14 @@
+/* General styling */
+
+.container {
+  height: 100%;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
 /* Header nav styling */
 
 .mat-drawer-container {
@@ -6,6 +17,7 @@
 
 .navigation-header {
   height: 81px;
+  max-width: 100%;
 }
 
 .header-row {
@@ -28,16 +40,15 @@
 
 /* Sidenav styling */
 
-.sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   left: 0;
-  right: 0;
-}
-
-mat-sidenav {
-  width: 40%;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 1s;
 }
 
 button:focus {
@@ -49,4 +60,51 @@ ul, li {
   margin: 10px;
   padding-inline-start: 0;
   text-align: center;
+  color: #fff;
+}
+
+li:focus {
+  outline: none;
+}
+
+
+/* Footer styling */
+
+.footer-row {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+
+div p:first-of-type {
+  margin-bottom: 0;
+}
+
+h6 {
+  margin-top: .5rem;
+}
+
+.social-icons, .social-icons:focus, .social-icons:active {
+  display: inline-block;
+  margin: .5em;
+  width: 2em;
+  height: 2em;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-icons:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+fa-icon {
+  line-height: 1.9em;
+}
+
+.close-sidenav {
+  text-align: end;
 }

@@ -5,6 +5,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import {faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   imports: [
@@ -13,7 +15,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
     FlexLayoutModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FontAwesomeModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -21,7 +24,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
     FlexLayoutModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FontAwesomeModule
   ]
 })
-export class SharedModule {}
+export class SharedModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faFacebookF, faLinkedinIn);
+  }
+}
