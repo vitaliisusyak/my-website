@@ -1,18 +1,45 @@
 <div class="container-fluid">
+  <div class="row navigation-header">
+    <!-- Header navigation with sidenav -->
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav>
+        <ul>
+          <li *ngFor="let link of links"
+              [routerLink]="link"
+              tabindex="-1"
+              (click)="sidenav.close()">{{ link | uppercase }}</li>
+        </ul>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="container-fluid">
+          <div class="row header-row">
+            <!-- Toggle sidenav -->
+            <div class="col-sm-1 col-2" fxShow.gt-sm="false" fxShow="true">
+              <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+              </button>
+            </div>
+            <!-- Photo -->
+            <div class="col-sm-1 col-10">
+              <img src="../assets/my_photo.jpg" alt="My Photo" class="my-photo">
+            </div>
+            <!-- Router links -->
+            <div class="col-sm-11" fxHide fxShow.gt-sm>
+              <nav mat-tab-nav-bar mat-align-tabs="end">
+                <a mat-tab-link
+                   *ngFor="let link of links"
+                   (click)="activeLink = link"
+                   [active]="activeLink == link"
+                   [routerLink]="link">{{ link | uppercase }}</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  <!-- Routers content -->
   <div class="row">
-    <div fxFlex fxLayout fxLayoutAlign="end" class="col-xl-3 col-md-12">
-        <img src="../assets/my_photo.jpg" alt="My Photo" class="my-photo">
-    </div>
-    <div class="col-xl-9 col-md-12">
-      <nav mat-tab-nav-bar mat-align-tabs="end">
-        <a mat-tab-link
-           *ngFor="let link of links"
-           (click)="activeLink = link"
-           [active]="activeLink == link"
-           [routerLink]="link">{{ link | uppercase }}</a>
-      </nav>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-<router-outlet></router-outlet>

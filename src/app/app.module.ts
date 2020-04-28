@@ -1,18 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MatSliderModule } from '@angular/material/slider';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTabsModule} from '@angular/material/tabs';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SkillsComponent } from './pages/skills/skills.component';
-import { ExperienceComponent } from './pages/experience/experience.component';
-import { EducationComponent } from './pages/education/education.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {SkillsComponent} from './pages/skills/skills.component';
+import {ExperienceComponent} from './pages/experience/experience.component';
+import {EducationComponent} from './pages/education/education.component';
+import {ContactComponent} from './pages/contact/contact.component';
+import {HomeComponent} from './pages/home/home.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,16 +19,13 @@ import { HomeComponent } from './pages/home/home.component';
     ContactComponent,
     HomeComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatSliderModule,
-        MatButtonModule,
-        MatTabsModule,
-        FlexLayoutModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

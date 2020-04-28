@@ -1,17 +1,52 @@
-.container-fluid {
-  height: 20%;
+/* Header nav styling */
+
+.mat-drawer-container {
+  background-color: transparent;
 }
 
-.col-md-12 {
-  text-align: center;
+.navigation-header {
+  height: 81px;
+}
+
+.header-row {
+  margin: 1em 0;
 }
 
 .mat-tab-link {
   color: black;
 }
 
+.mat-icon {
+  color: chocolate;
+}
+
 .my-photo {
   width: 50px;
   height: 48px;
   border-radius: 50%;
+}
+
+/* Sidenav styling */
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav {
+  width: 40%;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+  margin: 10px;
+  padding-inline-start: 0;
+  text-align: center;
 }
