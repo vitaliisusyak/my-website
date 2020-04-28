@@ -11,7 +11,6 @@ export class AppComponent {
   activeLink = this.links[0];
   isSidenavOpened: boolean;
   @ViewChild('sidenav') sidenavDiv;
-  @ViewChild('container') containerDiv;
 
   constructor() {
   }
