@@ -1,3 +1,18 @@
+/* General styling */
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 /* Header nav styling */
 
 .mat-drawer-container {
@@ -5,39 +20,52 @@
 }
 
 .navigation-header {
-  height: 81px;
+  padding-top: .5rem;
 }
 
 .header-row {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .mat-tab-link {
-  color: black;
+  color: #b69a72;
+  font-family: Barbedor, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+}
+
+::ng-deep .mat-tab-header, .mat-tab-nav-bar {
+  border-bottom: 0;
 }
 
 .mat-icon {
   color: chocolate;
 }
 
-.my-photo {
-  width: 50px;
-  height: 48px;
-  border-radius: 50%;
+.my-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
 }
 
 /* Sidenav styling */
 
-.sidenav-container {
-  position: absolute;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-}
-
-mat-sidenav {
-  width: 40%;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 1s;
 }
 
 button:focus {
@@ -46,7 +74,53 @@ button:focus {
 
 ul, li {
   list-style: none;
-  margin: 10px;
+  margin: 15px 10px;
   padding-inline-start: 0;
   text-align: center;
+  color: #fff;
+}
+
+li:focus {
+  outline: none;
+}
+
+
+/* Footer styling */
+
+.footer-row {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+
+div p:first-of-type {
+  margin-bottom: 0;
+}
+
+h6 {
+  margin-top: .5rem;
+}
+
+.social-icons, .social-icons:focus, .social-icons:active {
+  display: inline-block;
+  margin: .5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-icons:hover {
+  background-color: #b69a72;
+}
+
+fa-icon {
+  line-height: 2.1rem;
+  color: #7b1fa2;
+}
+
+.close-sidenav {
+  text-align: end;
 }

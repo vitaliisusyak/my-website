@@ -1,45 +1,68 @@
 <div class="container-fluid">
   <div class="row navigation-header">
     <!-- Header navigation with sidenav -->
-    <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #sidenav>
-        <ul>
-          <li *ngFor="let link of links"
-              [routerLink]="link"
-              tabindex="-1"
-              (click)="sidenav.close()">{{ link | uppercase }}</li>
-        </ul>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <div class="container-fluid">
-          <div class="row header-row">
-            <!-- Toggle sidenav -->
-            <div class="col-sm-1 col-2" fxShow.gt-sm="false" fxShow="true">
-              <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-              </button>
-            </div>
-            <!-- Photo -->
-            <div class="col-sm-1 col-10">
-              <img src="../assets/my_photo.jpg" alt="My Photo" class="my-photo">
-            </div>
-            <!-- Router links -->
-            <div class="col-sm-11" fxHide fxShow.gt-sm>
-              <nav mat-tab-nav-bar mat-align-tabs="end">
-                <a mat-tab-link
-                   *ngFor="let link of links"
-                   (click)="activeLink = link"
-                   [active]="activeLink == link"
-                   [routerLink]="link">{{ link | uppercase }}</a>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+    <div class="sidenav" #sidenav>
+      <div class="close-sidenav">
+        <mat-icon (click)="openSidenav()">close</mat-icon>
+      </div>
+      <ul>
+        <li *ngFor="let link of links"
+            [routerLink]="link"
+            tabindex="-1"
+            (click)="openSidenav()">{{ link | uppercase }}</li>
+      </ul>
+    </div>
+    <!-- Toggle sidenav -->
+    <div class="col-sm-1 col-2" fxShow.gt-sm="false" fxShow="true">
+      <button mat-icon-button (click)="openSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <!-- Photo -->
+    <div class="col-sm-1 col-10">
+      <a [routerLink]="'contact'">
+        <img src="../assets/my_logo.jpg" alt="My Logo" class="my-logo" >
+      </a>
+    </div>
+    <!-- Router links -->
+    <div class="col-sm-11" fxHide fxShow.gt-sm>
+      <nav mat-tab-nav-bar mat-align-tabs="end">
+        <a mat-tab-link
+           *ngFor="let link of links"
+           (click)="activeLink = link"
+           [active]="activeLink == link"
+           [routerLink]="link">{{ link | uppercase }}</a>
+      </nav>
+    </div>
   </div>
   <!-- Routers content -->
-  <div class="row">
+  <div>
     <router-outlet></router-outlet>
+  </div>
+  <!-- Footer -->
+  <div class="row footer-row">
+    <div class="col-md-4">
+      <h6>ADDRESS</h6>
+      <p>5 Symonenka Street,</p>
+      <p>Ivano-Frankivsk, Ukraine</p>
+    </div>
+    <div class="col-md-4">
+      <h6>CONNECT</h6>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/susyak.vitalii" target="_blank">
+          <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/vitalii-susiak-953610162/" target="_blank">
+          <fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h6>CONTACT</h6>
+      <p>Tel: +38-099-28-68-349</p>
+      <p>Mail: susyak.vitalii@gmail.com</p>
+    </div>
   </div>
 </div>
