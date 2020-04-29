@@ -1,0 +1,67 @@
+/* Desk image with role and name */
+
+.div-row-with-image {
+  color: white;
+  background: url('../../../assets/working_desk.jpg') no-repeat;
+  background-size: cover;
+}
+
+.background-size {
+  width: 100%;
+}
+
+.row div {
+  text-align: center;
+}
+
+.front-end {
+  padding: 8rem;
+}
+
+.fullname {
+  padding: 10rem 0 2rem;
+}
+
+
+.row div:nth-child(1) span {
+  font-size: 5rem;
+}
+
+.row div:nth-child(2) span, .div-row-acquainted-text {
+  font-size: 3rem;
+}
+
+/* Get acquainted part */
+
+.div-row-acquainted-text {
+  justify-content: center;
+  padding: 5rem 0 2rem;
+}
+
+/* About me part */
+
+.div-row-about-me {
+  padding-bottom: 5rem;
+}
+
+p {
+  text-align: justify;
+}
+
+.get-in-touch-link {
+  color: #7b1fa2;
+  font-weight: 600;
+}
+
+.get-in-touch-link:hover {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.mat-raised-button {
+  font-family: Barbedor, Roboto, "Helvetica Neue", sans-serif;
+}
+

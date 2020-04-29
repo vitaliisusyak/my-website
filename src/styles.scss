@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html body { margin: 0; font-family: Barbedor, Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: Barbedor;
+  src: url("./assets/Barbedor Regular.ttf") format("truetype");
+}
+
+/* Primary setings
+colors: #7b1fa2 - фіолетовий
+#b69a72 - коричневий
+font - Barbedor
+*/

@@ -1,12 +1,16 @@
 /* General styling */
 
-.container {
+.container-fluid {
   height: 100%;
   padding: 0;
 }
 
 .row {
   margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* Header nav styling */
@@ -16,27 +20,38 @@
 }
 
 .navigation-header {
-  height: 81px;
-  max-width: 100%;
-  margin: 1em 0;
+  padding-top: .5rem;
 }
 
 .header-row {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .mat-tab-link {
-  color: black;
+  color: #b69a72;
+  font-family: Barbedor, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+}
+
+::ng-deep .mat-tab-header, .mat-tab-nav-bar {
+  border-bottom: 0;
 }
 
 .mat-icon {
   color: chocolate;
 }
 
-.my-photo {
-  width: 50px;
-  height: 48px;
-  border-radius: 50%;
+.my-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
 }
 
 /* Sidenav styling */
@@ -89,22 +104,21 @@ h6 {
 
 .social-icons, .social-icons:focus, .social-icons:active {
   display: inline-block;
-  margin: .5em;
-  width: 2em;
-  height: 2em;
-  color: #000;
+  margin: .5rem;
+  width: 2rem;
+  height: 2rem;
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .social-icons:hover {
-  color: #fff;
-  background-color: #000;
+  background-color: #b69a72;
 }
 
 fa-icon {
-  line-height: 1.9em;
+  line-height: 2.1rem;
+  color: #7b1fa2;
 }
 
 .close-sidenav {

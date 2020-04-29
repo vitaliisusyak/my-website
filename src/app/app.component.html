@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row navigation-header">
     <!-- Header navigation with sidenav -->
     <div class="sidenav" #sidenav>
@@ -20,7 +20,9 @@
     </div>
     <!-- Photo -->
     <div class="col-sm-1 col-10">
-      <img src="../assets/my_photo.jpg" alt="My Photo" class="my-photo">
+      <a [routerLink]="'contact'">
+        <img src="../assets/my_logo.jpg" alt="My Logo" class="my-logo" >
+      </a>
     </div>
     <!-- Router links -->
     <div class="col-sm-11" fxHide fxShow.gt-sm>
@@ -34,8 +36,8 @@
     </div>
   </div>
   <!-- Routers content -->
-  <div class="row router-content">
-    <router-outlet class="col-md-12"></router-outlet>
+  <div>
+    <router-outlet></router-outlet>
   </div>
   <!-- Footer -->
   <div class="row footer-row">
