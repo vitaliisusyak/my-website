@@ -1,1 +1,97 @@
-<p>skills works!</p>
+<div class="container">
+  <div class="row my-skill-values">
+    <h1>MY SKILLS VALUES</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h3>Main skills</h3>
+      <li>
+        <h6>HTML</h6>
+        <span class="bar">
+          <span class="html" [@htmlBar]="htmlState">
+          </span>
+          <span class="percents">90%</span>
+        </span>
+      </li>
+      <li>
+        <h6>CSS</h6>
+        <span class="bar">
+          <span class="css" [@cssBar]="cssState">
+          </span>
+          <span class="percents">78%</span>
+        </span>
+      </li>
+      <li>
+        <h6>JavaScript</h6>
+        <span class="bar">
+          <span class="javascript" [@cssBar]="cssState">
+          </span>
+          <span class="percents">80%</span>
+        </span>
+      </li>
+    </div>
+
+
+    <div class="col-6">
+      <h3>Other skills</h3>
+      <mat-chip-list aria-label="Other skills" class="other-skills-wrapper">
+        <mat-chip color="primary" selected>Angular2+</mat-chip>
+        <mat-chip color="primary" selected>Typescript</mat-chip>
+        <mat-chip color="primary" selected>JQuery</mat-chip>
+        <mat-chip color="primary" selected>RxJs</mat-chip>
+        <mat-chip color="primary" selected>NgRx</mat-chip>
+        <mat-chip color="primary" selected>Angular Material</mat-chip>
+        <mat-chip>Bootstrap</mat-chip>
+        <mat-chip>SASS</mat-chip>
+        <mat-chip>SQL</mat-chip>
+        <mat-chip>Git</mat-chip>
+        <mat-chip>SVN</mat-chip>
+        <mat-chip>WebStorm</mat-chip>
+        <mat-chip>VS Code</mat-chip>
+        <mat-chip>Firebase</mat-chip>
+        <mat-chip>SCRUM</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div class="row language-skills-values">
+    <h3>Language skills</h3>
+  </div>
+  <div class="row language-skill-bars-row">
+    <div class="col-4">
+      <h6>ENGLISH</h6>
+      <div class="progress english">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+        <div class="progress-value">82%</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <h6>RUSSIAN</h6>
+      <div class="progress russian">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+        <div class="progress-value">90%</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <h6>UKRAINIAN</h6>
+      <div class="progress ukrainian">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+        <div class="progress-value">98%</div>
+      </div>
+    </div>
+  </div>
+</div>
