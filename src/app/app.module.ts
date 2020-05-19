@@ -9,6 +9,7 @@ import {EducationComponent} from './pages/education/education.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {HomeComponent} from './pages/home/home.component';
 import {SharedModule} from './shared/shared.module';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {SharedModule} from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

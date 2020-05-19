@@ -1,0 +1,196 @@
+/*  Mixins  */
+
+@mixin bar-mixin {
+  display: block;
+  border-radius: 16px;
+  height: 1rem;
+}
+/* General styling */
+
+.container {
+  padding-top: 3rem;
+}
+
+.row {
+  margin: 3rem 0;
+}
+
+/* Main skills */
+
+.my-skill-values, .language-skills-values {
+  justify-content: center;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.bar {
+  @include bar-mixin;
+  background-color: #e8e8e8;
+
+  span:first-of-type {
+    @include bar-mixin;
+    background-color: #7b1fa2;
+    float: left;
+  }
+
+  span:nth-last-child(1) {
+    position: relative;
+    bottom: 3px;
+    right: 32px;
+    color: #fff;
+  }
+}
+
+/* Other skills */
+
+.mat-chip-list-wrapper {
+  margin: 1rem 0;
+}
+
+div mat-chip {
+  background-color: #b69a72;
+}
+
+/* Language skills */
+
+.progress{
+  width: 150px;
+  height: 150px;
+  background: none;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1s linear forwards;
+}
+.progress .progress-value{
+  width: 40%;
+  height: 40%;
+  border-radius: 69%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  font-weight: 600;
+  color: #7b1fa2;
+  line-height: 68px;
+  text-align: center;
+  position: absolute;
+  top: 29%;
+  left: 29%;
+}
+.progress.english .progress-bar, .progress.ukrainian .progress-bar{
+  border-color: #7b1fa2;
+}
+.progress.english .progress-left .progress-bar{
+  animation: loading-english 1s linear forwards 1s;
+}
+.progress.russian .progress-bar{
+  border-color: #b69a72;
+}
+.progress.russian .progress-left .progress-bar{
+  animation: loading-russian 1s linear forwards 1s;
+}
+
+.progress.ukrainian .progress-left .progress-bar {
+  animation: loading-ukrainian 1s linear forwards 1s;
+}
+
+@keyframes loading-1{
+  0%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loading-english{
+  0%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(115deg);
+    transform: rotate(115deg);
+  }
+}
+
+@keyframes loading-russian{
+  0%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+
+@keyframes loading-ukrainian{
+  0%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(172deg);
+    transform: rotate(172deg);
+  }
+}
+
+.language-skill-bars-row h6 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
